@@ -14,15 +14,9 @@ body {
 	align-items: center;
 }
 
-
-.main_container {
-   width: 90%;
-   height: 60%;
-}
-
 .title {
 	padding: 10px;
-	font-size: 50px;
+	font-size: 36px;
 }
 
 .txt {
@@ -30,3 +24,12 @@ body {
 	font-size: 22px;
 	
 }
+
+
+.blueline {
+	width: 100%;
+	height: 3px;
+	/* border-radius: 10px; */
+	border-radius: 0 70% 70% 0;
+	background-color: rgb(0, 43, 134);
+ }

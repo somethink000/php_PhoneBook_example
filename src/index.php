@@ -17,11 +17,51 @@
         <div class="main_container">
 
             <div class="phones_box">
-                 
+                 <div class="phones_contain">
+
+                    <h1 class="title phones_title">Телефонная книга</h1>
+                    <div class="blueline"></div>
+
+                    <div class="phones_column">
+
+                        <div class="phone_item">
+                            <h1 class="txt phoneitem_text">Имя: Владимир пупкин</h1>
+                            <h1 class="txt phoneitem_text"> / </h1>
+                            <h1 class="txt phoneitem_text">Номер телефона: 8-970-148-82-28</h1>
+
+                            <form action="action.php" method="post">
+                                <button class="phone_delete" type="submit">Удалить</button>
+                            </form>
+
+                        </div>
+
+                        <div class="phone_item">
+
+                        </div>
+                        <div class="phone_item">
+
+                        </div>
+                        <div class="phone_item">
+
+                        </div>
+
+                    </div>
+
+                 </div>
             </div>
+
 
             <div class="add_form_box">
                  
+                <form class="num_form" action="action.php" method="post">
+                    
+                    <input class="num_input" name="name" id="name" type="text" placeholder="Имя">
+
+                    <input class="num_input" name="age" id="age" type="tel" placeholder="Номер телефона">
+
+                    <button class="num_submit" type="submit">Добавить +</button>
+                </form>
+
             </div>
 
         </div>

@@ -45,6 +45,21 @@ table {
 	border-spacing: 0;
 }
 
+input {
+	height: 30px;
+	width: 200px;
+}
+
+form {
+	flex-direction: column;
+}
+
+button {
+	height: 35px;
+	width: 100px;
+	border: none;
+}
+
 a {
 	pointer-events: all;
 }
