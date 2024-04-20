@@ -25,10 +25,17 @@
                     <div class="phones_column">
 
                         <div class="phone_item">
-                            <h1 class="txt phoneitem_text">Имя: Владимир пупкин</h1>
-                            <h1 class="txt phoneitem_text"> / </h1>
-                            <h1 class="txt phoneitem_text">Номер телефона: 8-970-148-82-28</h1>
 
+                            <h1 class="txt phoneitem_text">Имя:</h1>
+                            <h1 class="txt phoneitem_text">Владимир пупкин</h1>
+            
+                            <div class="blueline_solid"></div>
+
+                            <h1 class="txt phoneitem_text">Номер телефона:</h1>
+                            <h1 class="txt phoneitem_text">8-970-148-82-28</h1>
+
+                            <div class="blueline_solid"></div> 
+                            
                             <form action="action.php" method="post">
                                 <button class="phone_delete" type="submit">Удалить</button>
                             </form>
