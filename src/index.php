@@ -13,6 +13,9 @@
     </head>
     
 
+    <?php //echo htmlspecialchars($_POST['name']); ?>
+
+
     <body class="blur">
         <div class="main_container">
 
@@ -23,34 +26,27 @@
                     <div class="blueline"></div>
 
                     <div class="phones_column">
+                        <?php 
+                            $allNumbers = json_decode(file_get_contents("data/phone_numbers.json")); 
 
-                        <div class="phone_item">
+                            foreach ( $allNumbers as $item ) { 
+                        ?>
+                    
+                            <div class="phone_item">
+                                
+                                
 
-                            <h1 class="txt phoneitem_text">Имя:</h1>
-                            <h1 class="txt phoneitem_text">Владимир пупкин</h1>
-            
-                            <div class="blueline_solid"></div>
+                                <h1 class="txt phoneitem_text"><?php echo $item->name; ?></h1>
 
-                            <h1 class="txt phoneitem_text">Номер телефона:</h1>
-                            <h1 class="txt phoneitem_text">8-970-148-82-28</h1>
+                                <h1 class="txt phoneitem_text"><?php echo $item->phone; ?></h1>
+                                
+                                <form action="delete_number.php" method="post">
+                                    <button class="phone_delete" type="submit" name="delet" id="delet" value=<?php echo $item->id; ?>>Удалить</button>
+                                </form>
 
-                            <div class="blueline_solid"></div> 
-                            
-                            <form action="action.php" method="post">
-                                <button class="phone_delete" type="submit">Удалить</button>
-                            </form>
+                            </div>
 
-                        </div>
-
-                        <div class="phone_item">
-
-                        </div>
-                        <div class="phone_item">
-
-                        </div>
-                        <div class="phone_item">
-
-                        </div>
+                        <?php } ?>
 
                     </div>
 
@@ -60,11 +56,11 @@
 
             <div class="add_form_box">
                  
-                <form class="num_form" action="action.php" method="post">
+                <form class="num_form" action="save_number.php" method="post">
                     
                     <input class="num_input" name="name" id="name" type="text" placeholder="Имя">
 
-                    <input class="num_input" name="age" id="age" type="tel" placeholder="Номер телефона">
+                    <input class="num_input" name="phone" id="phone" type="tel" placeholder="Номер телефона">
 
                     <button class="num_submit" type="submit">Добавить +</button>
                 </form>

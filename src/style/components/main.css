@@ -34,18 +34,19 @@
 }
 
 .phone_item {
-	width: 220px;
-	margin: 1%;
-	height: 250px;
+	width: 200px;
+	margin: 10px;
+	height: 160px;
 	border-radius: 10px;
 	align-items: center;
 	justify-content: center;
-	background-color: rgb(255, 250, 208);
+	box-shadow: 5px 5px 2px rgb(192, 189, 166);
 	flex-direction: column;
-
+	border: 1px solid rgba(0, 43, 134);
 }
 
 .phoneitem_text {
+	margin-top: 5px;
 	font-size: 16px;
 }
 
