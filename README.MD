@@ -7,5 +7,5 @@
 
 
 <p align="center">
- <img width="200px" src="src/assets/example.png" alt="qr"/>
+ <img width="900px" src="src/assets/example.png" alt="qr"/>
 </p>
