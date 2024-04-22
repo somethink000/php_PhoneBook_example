@@ -14,7 +14,16 @@
     }
     
 
+   
+    $regexp = '/^\s?(\+\s?7|8)([- ()]*\d){10}$/';
+
     
+    if (preg_match($regexp, $_POST['phone']) == 0 ) {
+       
+        header("Location: /index.php");
+
+        exit( );
+    }
 
 
     $allNumbers = json_decode(file_get_contents("data/phone_numbers.json"));
@@ -24,7 +33,8 @@
         "name" => htmlspecialchars($_POST['name']),
         "phone" => htmlspecialchars($_POST['phone']),
     );
-    
+
+
     $allNumbers[] = $newNumber;
 
     $newJson = json_encode($allNumbers); 
